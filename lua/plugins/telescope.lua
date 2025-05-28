@@ -43,4 +43,4 @@ return {
             builtin.find_files({ cwd = "~/.config/nvim/" });
         end)
     end
-}
+} 

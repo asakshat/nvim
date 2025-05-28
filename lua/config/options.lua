@@ -23,8 +23,6 @@ set.signcolumn = "yes"
 -- cursor line
 set.cursorline = true
 
--- 80th column
- set.colorcolumn = "100"
 
 -- clipboard
 vim.schedule(function()
