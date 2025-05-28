@@ -2,24 +2,23 @@ vim.g.mapleader = " "
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 local explorer_open = false
 
-function ToggleExplorer()
-  if explorer_open then
-    vim.cmd('bd')  
-    explorer_open = false
-  else
-    vim.cmd('Ex')  
-    explorer_open = true
-  end
+function toggleEX()
+    if explorer_open then
+        explorer_open = false
+    else
+        vim.cmd('Ex')
+        explorer_open = true
+    end
 end
 
-vim.keymap.set("n", "<leader>E", ToggleExplorer)
+vim.keymap.set("n", "<leader>e", toggleEX)
 vim.keymap.set("n", "J", "mzJ`z") -- Remap joining lines
-vim.keymap.set("n", "<C-d>", "<C-d>zz") 
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv") 
+vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
