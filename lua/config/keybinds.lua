@@ -4,6 +4,7 @@ local explorer_open = false
 
 function toggleEX()
     if explorer_open then
+        vim.cmd('bd')
         explorer_open = false
     else
         vim.cmd('Ex')
