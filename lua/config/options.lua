@@ -23,10 +23,9 @@ set.signcolumn = "yes"
 -- cursor line
 set.cursorline = true
 
-
 -- clipboard
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+	vim.o.clipboard = "unnamedplus"
 end)
 -- backspace
 set.backspace = "indent,eol,start"
@@ -52,6 +51,6 @@ set.incsearch = true
 
 -- faster cursor hold
 set.updatetime = 50
-vim.g.have_nerd_font =true 
-vim.o.mouse = 'a'
+vim.g.have_nerd_font = true
+vim.o.mouse = "a"
 vim.o.confirm = true
