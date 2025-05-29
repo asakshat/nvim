@@ -31,6 +31,7 @@ return {
 				builtin.grep_string({})
 			end, { desc = "Find current string: " })
 			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+			vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>fq", builtin.quickfix, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })

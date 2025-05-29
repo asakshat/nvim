@@ -1,42 +1,44 @@
 return {
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = function()
-            local configs = require("nvim-treesitter.configs")
-            configs.setup({
-                -- enable syntax highlighting
-                highlight = {
-                    enable = true,
-                },
-                -- enable indentation
-                indent = { enable = true },
-                -- enable autotagging (w/ nvim-ts-autotag plugin)
-                autotag = { enable = true },
-                -- ensure these language parsers are installed
-                ensure_installed = {
-                    "json",
-                    "javascript",
-                    "query",
-                    "typescript",
-                    "tsx",
-                    "yaml",
-                    "html",
-                    "css",
-                    "markdown",
-                    "markdown_inline",
-                    "bash",
-                    "lua",
-                    "vim",
-                    "vimdoc",
-                    "c",
-                    "dockerfile",
-                    "gitignore",
-                    
-                },
-                -- auto install above language parsers
-                auto_install = true,
-            })
-        end
-    }
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	config = function()
+		local configs = require("nvim-treesitter.configs")
+		configs.setup({
+			-- Required fields
+			sync_install = false,
+			auto_install = true,
+			ignore_install = {},
+			modules = {},
+
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = false,
+			},
+			indent = {
+				enable = true,
+			},
+			autotag = {
+				enable = true,
+			},
+			ensure_installed = {
+				"json",
+				"javascript",
+				"query",
+				"typescript",
+				"tsx",
+				"yaml",
+				"html",
+				"css",
+				"markdown",
+				"markdown_inline",
+				"bash",
+				"lua",
+				"vim",
+				"vimdoc",
+				"c",
+				"dockerfile",
+				"gitignore",
+			},
+		})
+	end,
 }
