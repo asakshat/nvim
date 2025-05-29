@@ -8,7 +8,8 @@ set.number = true
 -- indentation and tabs
 set.tabstop = 4
 set.shiftwidth = 4
-set.autoindent = true
+set.softtabstop = 4
+set.smartindent = true
 set.expandtab = true
 
 -- search settings
@@ -20,13 +21,13 @@ set.termguicolors = true
 set.background = "dark"
 set.signcolumn = "yes"
 
--- cursor line
+set.isfname:append("@-@") -- cursor line
 set.cursorline = true
 
 -- clipboard
-vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
-end)
+-- vim.schedule(function()
+-- 	vim.o.clipboard = "unnamedplus"
+-- end)
 -- backspace
 set.backspace = "indent,eol,start"
 
@@ -39,6 +40,8 @@ set.iskeyword:append("-")
 
 -- keep cursor at least 8 rows from top/bot
 set.scrolloff = 8
+set.signcolumn = "yes"
+set.isfname:append("@-@")
 
 -- undo dir settings
 set.swapfile = false
@@ -48,6 +51,7 @@ set.undofile = true
 
 -- incremental search
 set.incsearch = true
+set.hlsearch = false
 
 -- faster cursor hold
 set.updatetime = 50
