@@ -30,10 +30,6 @@ vim.keymap.set("n", "<leader>ga", function()
 	vim.cmd("Git add .")
 end, { desc = "Git add all" })
 
-vim.keymap.set("n", "<leader>gc", function()
-	vim.cmd("Git commit")
-end, { desc = "Git commit (interactive)" })
-
 vim.keymap.set("n", "<leader>gcm", function()
 	vim.ui.input({ prompt = "Commit message: " }, function(msg)
 		if msg and #msg > 0 then
