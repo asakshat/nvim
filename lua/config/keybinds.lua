@@ -25,20 +25,15 @@ vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle termina
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 vim.keymap.set("t", "<leader>t", [[<C-\><C-n><cmd>ToggleTerm<CR>]], { desc = "Toggle terminal from terminal mode" })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "vim fugitive git signs" })
--- Git status (fugitive main window)
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status (Fugitive)" })
 
--- Git add all staged
 vim.keymap.set("n", "<leader>ga", function()
 	vim.cmd("Git add .")
 end, { desc = "Git add all" })
 
--- Git commit interactively (opens commit message buffer)
 vim.keymap.set("n", "<leader>gc", function()
 	vim.cmd("Git commit")
 end, { desc = "Git commit (interactive)" })
 
--- Git commit with inline message (no buffer opens)
 vim.keymap.set("n", "<leader>gcm", function()
 	vim.ui.input({ prompt = "Commit message: " }, function(msg)
 		if msg and #msg > 0 then
