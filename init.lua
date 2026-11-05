@@ -1,0 +1,7 @@
+require('config.options')   
+require('plugins')          
+require('config.keybinds')
+require('config.autocmds')
+require('config.diagnostics')
+require('config.netrw')
+require('config.lsp')
